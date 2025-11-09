@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Pomodoro Timer</title>
@@ -7,8 +7,8 @@
 
 <body>
 <main class="container">
-    <div class="timerLabel">Pomodoro Timer</div>
-    <div class="timerClock">25:00</div>
+    <div class="timerLabel" id="timerLabel">Pomodoro Timer</div>
+    <div class="timerClock" id="timerClock">25:00</div>
     <div class="timerControls">
         <button class="controlBtn" id="startBtn">Start</button>
         <button class="controlBtn" id="PauseBtn">Pause</button>
@@ -16,5 +16,9 @@
     </div>
     <div class="timerStatus">Focus Time</div>
 </main>
+
+<!--script needs to be at the bottom so
+    it can access DOM elements after they're rendered.-->
+<script src="script.js"></script>
 </body>
 </html>
