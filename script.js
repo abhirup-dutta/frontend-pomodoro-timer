@@ -1,5 +1,8 @@
 const workDuration = 25 * 60;
-let clockDOMElement = document.getElementById("timerClock");
+const clockDOMElement = document.getElementById("timerClock");
+const startButton = document.getElementById("startBtn");
+const pauseButton = document.getElementById("pauseBtn");
+const resetButton = document.getElementById("resetBtn");
 
 
 function renderTimeForDisplay(time) {
@@ -12,7 +15,7 @@ function updateClockDisplay(displayDOMElement, time) {
     displayDOMElement.textContent = renderTimeForDisplay(time);
 }
 
-function startTimer(displayDOMElement, timeLeft, updateDisplayFunction) {
+function startTimerWithParameters(displayDOMElement, timeLeft, updateDisplayFunction) {
     let timer = setInterval(() => {
         if (timeLeft > 0) {
             timeLeft--;
@@ -24,4 +27,9 @@ function startTimer(displayDOMElement, timeLeft, updateDisplayFunction) {
     }, 1000);
 }
 
-startTimer(clockDOMElement, workDuration, updateClockDisplay);
+function startTimer()
+{
+    startTimerWithParameters(clockDOMElement, workDuration, updateClockDisplay);
+}
+
+startButton.addEventListener("click", startTimer);
