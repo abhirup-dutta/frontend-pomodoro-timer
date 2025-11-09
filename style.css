@@ -76,6 +76,15 @@ button:hover {
     padding-top: 10px;
     border-top: 2px solid var(--color-fallen-leaf);
     padding-bottom: 10px;
+    background-color: var(--color-cream);
     color: var(--color-pumpkin);
     font-size: 25px;
+}
+
+.cycleCount {
+    padding-top: 10px;
+    border-top: 2px solid var(--color-fallen-leaf);
+    padding-bottom: 10px;
+    color: var(--color-pumpkin);
+    font-size: 18px;
 }
